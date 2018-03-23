@@ -1,8 +1,7 @@
+let nodeModulesPath = '../../../node_modules/';
 
-/**
- * First, we will load all of this project's Javascript utilities and other
- * dependencies. Then, we will be ready to develop a robust and powerful
- * application frontend using useful Laravel and JavaScript libraries.
- */
-
-require('./bootstrap');
+require(nodeModulesPath + 'jquery/dist/jquery.min.js');
+require(nodeModulesPath + 'bootstrap/dist/js/bootstrap.min.js');
+require(nodeModulesPath + 'select2/dist/js/select2.min.js');
+require(nodeModulesPath + 'admin-lte/dist/js/adminlte.min.js');
+require(nodeModulesPath + 'sweetalert2/dist/sweetalert2.min.js');
