@@ -1,7 +1,5 @@
-let nodeModulesPath = '../../../node_modules/';
-
-require(nodeModulesPath + 'jquery/dist/jquery.min.js');
-require(nodeModulesPath + 'bootstrap/dist/js/bootstrap.min.js');
-require(nodeModulesPath + 'select2/dist/js/select2.min.js');
-require(nodeModulesPath + 'admin-lte/dist/js/adminlte.min.js');
-require(nodeModulesPath + 'sweetalert2/dist/sweetalert2.min.js');
+require("../../../node_modules/jquery/dist/jquery");
+require("../../../node_modules/bootstrap/dist/js/bootstrap");
+require("../../../node_modules/select2/dist/js/select2");
+require("../../../node_modules/admin-lte/dist/js/adminlte");
+require("../../../node_modules/sweetalert2/dist/sweetalert2");
