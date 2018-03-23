@@ -1,20 +1,23 @@
 <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
+        <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D400/sign=4b0345ec92cad1c8d0bbfd274f3f67c4/aa18972bd40735fa9d801b7a99510fb30e240884.jpg" class="img-circle" alt="User Image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlqDPXyHFAikb1l1RJapqnp7SzrdoMCkCn373OE3-cAJWhjHzH" class="img-circle" alt="麦浚龙">
             </div>
             <div class="pull-left info">
-                <p>登录名称</p>
-                <a href="{{route('backstage.dashboard.index')}}"><i class="fa fa-circle text-success"></i> 登录账号
+                <p>麦浚龙</p>
+                <a href=""><i class="fa fa-circle text-success"></i> Juno Mak
                 </a>
             </div>
         </div>
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="active">
-                <a href="{{route('backstage.dashboard.index')}}"><i class="fa fa-dashboard"></i> <span>后台首页</span></a>
+            <li class="">
+                <a href=""><i class="fa fa-dashboard"></i> <span>后台首页</span></a>
             </li>
         </ul>
     </section>
+    <!-- /.sidebar -->
 </aside>

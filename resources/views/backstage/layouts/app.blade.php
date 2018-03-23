@@ -34,7 +34,6 @@
     @include('backstage.layouts._footer')
 </div>
 @yield('before.js')
-<script src="{{asset('js/all.js')}}"></script>
 <script src="{{asset('js/app.js')}}"></script>
 <script type="text/javascript">
     if ($('.select2').length > 0) {
