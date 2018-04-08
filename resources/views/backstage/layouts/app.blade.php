@@ -5,13 +5,13 @@
     <title>{{ $title or "" }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
-    @yield('before.css')
+    @yield('before.app.css')
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    @yield('after.css')
+    @yield('after.app.css')
 </head>
 <body class="skin-black">
 <div class="wrapper">
@@ -33,7 +33,7 @@
     </div>
     @include('backstage.layouts._footer')
 </div>
-@yield('before.js')
+@yield('before.app.js')
 <script src="{{asset('js/app.js')}}"></script>
 <script type="text/javascript">
     if ($('.select2').length > 0) {
@@ -94,6 +94,6 @@
         });
     });
 </script>
-@yield('after.js')
+@yield('after.app.js')
 </body>
 </html>
