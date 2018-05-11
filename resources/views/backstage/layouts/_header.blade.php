@@ -11,12 +11,12 @@
                     <ul class="dropdown-menu">
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="" class="btn btn-default btn-flat">编辑</a>
+                                <a href="" class="btn btn-primary btn-flat">编辑</a>
                             </div>
                             <div class="pull-right">
-                                <form action="" method="post">
+                                <form action="{{route('backstage.authentication.logout')}}" method="post">
                                     {{csrf_field()}}
-                                    <button class="btn btn-default btn-flat">注销</button>
+                                    <button class="btn btn-danger btn-flat">注销</button>
                                 </form>
                             </div>
                         </li>

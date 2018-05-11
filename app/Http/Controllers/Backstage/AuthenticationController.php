@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backstage;
 
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 /**
  * Class AuthenticationController 后台用户认证控制器
@@ -49,7 +50,23 @@ class AuthenticationController extends Controller
      */
     public function username()
     {
-        return 'name';
+        return 'account';
+    }
+
+    /**
+     * 用户退出登录
+     *
+     * @param  \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        return redirect(route('backstage.authentication.login.page'));
     }
 
     /**

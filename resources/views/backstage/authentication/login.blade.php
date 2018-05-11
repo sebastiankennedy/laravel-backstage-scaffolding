@@ -20,7 +20,8 @@
         <form action="{{route('backstage.authentication.login')}}" method="post">
             {{csrf_field()}}
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="登录账号" id="name" name="name">
+                <input type="text" class="form-control" placeholder="登录账号" id="account" name="account"
+                       value="{{old('account')}}">
                 <span class="fa fa-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">

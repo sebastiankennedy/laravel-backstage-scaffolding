@@ -5,5 +5,8 @@ Route::get('authentication/login', 'AuthenticationController@showLoginForm')->na
 Route::post('authentication/login', 'AuthenticationController@login')->name('authentication.login');
 Route::post('authentication/logout', 'AuthenticationController@logout')->name('authentication.logout');
 
+
 // 后台管理
-Route::get('/', 'DashboardController@index')->name('dashboard.index');
+Route::middleware(['auth.backstage'])->group(function () {
+    Route::get('/', 'DashboardController@index')->name('dashboard.index');
+});

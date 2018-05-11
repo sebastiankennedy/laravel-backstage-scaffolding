@@ -1,10 +1,10 @@
 <?php
 
 use App\Models\Admin;
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 class CreateAdminsTable extends Migration
 {
@@ -17,11 +17,12 @@ class CreateAdminsTable extends Migration
     {
         Schema::create(Admin::$tableName, function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->comment('名称');
-            $table->string('email')->unique()->comment('邮箱');
-            $table->string('phone')->unique()->comment('手机');
-            $table->string('avatar')->comment('头像');
+            $table->string('account')->unique()->comment('账号');
             $table->string('password')->comment('密码');
+            $table->string('name')->nullable()->comment('名称');
+            $table->string('email')->nullable()->unique()->comment('邮箱');
+            $table->string('phone')->nullable()->unique()->comment('手机');
+            $table->string('avatar')->nullable()->comment('头像');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
