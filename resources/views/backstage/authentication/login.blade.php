@@ -29,12 +29,35 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <button type="submit" class="btn btn-success btn-block btn-flat">登录</button>
+                    <button type="submit" id="submit-button" class="btn btn-success btn-block btn-flat">登录</button>
                 </div>
             </div>
         </form>
     </div>
 </div>
 <script src="{{asset('js/login.js')}}"></script>
+<script type="text/javascript">
+    $(function () {
+        const submitButton = $('#submit-button');
+        submitButton.click(function () {
+            swal({
+                title: '请稍等',
+                text: '正在执行登录操作',
+                onOpen: function () {
+                    swal.showLoading()
+                }
+            });
+        });
+
+        @if(session()->has('errors'))
+        swal({
+            title: '操作失败',
+            text: '{{implode("  ", $errors->all())}}',
+            type: 'error',
+            showConfirmButton: false
+        });
+        @endif
+    });
+</script>
 </body>
 </html>
