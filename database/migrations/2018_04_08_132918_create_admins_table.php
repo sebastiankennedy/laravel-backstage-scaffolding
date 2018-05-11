@@ -26,7 +26,7 @@ class CreateAdminsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
-        DB::statement("ALTER TABLE `" . Admin::$tableName . "` COMMENT '管理员'");
+        DB::statement("ALTER TABLE `" . Admin::$tableName . "` COMMENT '后台用户'");
     }
 
     /**

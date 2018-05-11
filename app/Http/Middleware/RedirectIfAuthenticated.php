@@ -18,6 +18,10 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
+            if ($guard === 'backstage') {
+                return redirect(route('backstage.dashboard.index'));
+            }
+
             return redirect('/home');
         }
 
