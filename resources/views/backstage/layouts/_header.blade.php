@@ -5,9 +5,9 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="{{ $currentBackstageUser->avatar }}" class="user-image"
-                             alt="{{ $currentBackstageUser->name }}">
-                        <span class="hidden-xs">{{ $currentBackstageUser->name }}</span>
+                        <img src="{{ $backstageCurrentUser->avatar }}" class="user-image"
+                             alt="{{ $backstageCurrentUser->name }}">
+                        <span class="hidden-xs">{{ $backstageCurrentUser->name }}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="user-footer">
