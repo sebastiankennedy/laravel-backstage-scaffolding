@@ -1,12 +1,13 @@
 <header class="main-header">
-    <a href="{{route('backstage.dashboard.index')}}" class="logo"><b>HD</b>Education</a>
+    <a href="{{route('backstage.dashboard.index')}}" class="logo">Laravel <b>Tutorial</b></a>
     <nav class="navbar navbar-static-top" role="navigation">
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlqDPXyHFAikb1l1RJapqnp7SzrdoMCkCn373OE3-cAJWhjHzH" class="user-image" alt=""/>
-                        <span class="hidden-xs">麦浚龙</span>
+                        <img src="{{ $currentBackstageUser->avatar }}" class="user-image"
+                             alt="{{ $currentBackstageUser->name }}">
+                        <span class="hidden-xs">{{ $currentBackstageUser->name }}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="user-footer">

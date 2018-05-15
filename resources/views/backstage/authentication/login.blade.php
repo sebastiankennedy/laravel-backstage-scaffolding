@@ -13,7 +13,7 @@
 <body class="login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href=""><b>Laravel</b> Tutorial</a>
+        <a href="">Laravel <b>Tutorial</b></a>
     </div>
     <div class="login-box-body">
         <p class="login-box-msg">Happy Coding</p>
