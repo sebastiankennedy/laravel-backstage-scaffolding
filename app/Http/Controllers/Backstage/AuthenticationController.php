@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backstage;
 
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use MooCat\Validation\Validator;
 
 /**
  * Class AuthenticationController 后台用户认证控制器
@@ -77,5 +78,22 @@ class AuthenticationController extends Controller
     public function guard()
     {
         return auth()->guard('backstage');
+    }
+
+    /**
+     * 定义用户多字段认证
+     *
+     * @param Request $request
+     *
+     * @return array
+     */
+    protected function attemptLogin(Request $request)
+    {
+        $credentials = [
+            Validator::validateMultipleLoginFields($request->input('account')) => $request->input('account'),
+            'password' => $request->input('password'),
+        ];
+
+        return $this->guard()->attempt($credentials);
     }
 }
