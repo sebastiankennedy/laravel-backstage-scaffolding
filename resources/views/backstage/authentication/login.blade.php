@@ -46,7 +46,11 @@
                 text: '正在执行登录操作',
                 onOpen: function () {
                     swal.showLoading()
-                }
+                },
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                showConfirmButton: false
             });
         });
 
