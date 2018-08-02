@@ -13,10 +13,10 @@ class AdminsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table(Admin::$tableName)->insert([
+        DB::table(Admin::TABLE)->insert([
             'account' => 'admin',
             'password' => bcrypt('123456'),
-            'phone' => '18023818157',
+            'phone' => '15089940511',
             'email' => 'admin@laravel-tutorial.local',
             'name' => '麦浚龙',
             'avatar' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlqDPXyHFAikb1l1RJapqnp7SzrdoMCkCn373OE3-cAJWhjHzH',

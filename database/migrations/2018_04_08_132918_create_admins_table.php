@@ -15,7 +15,7 @@ class CreateAdminsTable extends Migration
      */
     public function up()
     {
-        Schema::create(Admin::$tableName, function (Blueprint $table) {
+        Schema::create(Admin::TABLE, function (Blueprint $table) {
             $table->increments('id');
             $table->string('account')->unique()->comment('账号');
             $table->string('password')->comment('密码');
@@ -27,7 +27,7 @@ class CreateAdminsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
-        DB::statement("ALTER TABLE `" . Admin::$tableName . "` COMMENT '后台用户'");
+        DB::statement("ALTER TABLE `" . Admin::TABLE . "` COMMENT '后台用户'");
     }
 
     /**
@@ -37,6 +37,6 @@ class CreateAdminsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(Admin::$tableName);
+        Schema::dropIfExists(Admin::TABLE);
     }
 }
