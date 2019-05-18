@@ -13,7 +13,10 @@
         "axios": "^0.17",
         "cross-env": "^5.1",
         "laravel-mix": "^4.0.15",
-        "lodash": "^4.17.4"
+        "lodash": "^4.17.4",
+        "sass": "^1.20.1",
+        "sass-loader": "^7.1.0",
+        "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
         "admin-lte": "^2.4.3",

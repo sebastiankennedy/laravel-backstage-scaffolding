@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
-    <title>{{ $pageTitle or "Laravel Tutorial" }} - @yield('title')</title>
-    <meta name="keywords" content="{{ $pageKeywords or "Laravel Tutorial" }}">
-    <meta name="description" content="{{ $pageDescription or "Laravel Tutorial" }}">
+    <title>{{ $pageTitle ?? 'Laravel Backstage Scaffolding' }} @yield('title')</title>
+    <meta name="keywords" content="{{ $pageKeywords ?? 'Laravel Backstage Scaffolding' }}">
+    <meta name="description" content="{{ $pageDescription ?? 'Laravel Backstage Scaffolding' }}">
     @yield('before.app.css')
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <!--[if lt IE 9]>
@@ -23,8 +23,8 @@
         @if(!empty($pageTitle))
             <section class="content-header">
                 <h1>
-                    {{ $pageTitle or null }}
-                    <small>{{ $pageDescription or null }}</small>
+                    {{ $pageTitle ?? null }}
+                    <small>{{ $pageDescription ?? null }}</small>
                 </h1>
                 @yield('breadcrumbs')
             </section>
@@ -45,14 +45,14 @@
     @if(Session::has('success'))
     swal({
         title: '操作成功',
-        text: '{{Session::get('success')}}',
+        text: '{{session()->get('success')}}',
         type: 'success',
         timer: 3000,
         showConfirmButton: false
     });
     @endif
 
-    @if(Session::has('errors'))
+    @if(session()->has('errors'))
     swal({
         title: '操作失败',
         text: '{{implode('  ', $errors->all())}}',

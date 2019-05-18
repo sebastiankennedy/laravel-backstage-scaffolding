@@ -2,10 +2,10 @@
     <section class="sidebar">
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="{{ $backstageCurrentUser->avatar }}" class="img-circle" alt="麦浚龙">
+                <img src="{{ auth()->user()->avatar }}" class="img-circle" alt="麦浚龙">
             </div>
             <div class="pull-left info">
-                <p>{{ $backstageCurrentUser->name }}</p>
+                <p>{{ auth()->user()->name }}</p>
                 <a href="">
                     <i class="fa fa-circle text-success"></i> 在线
                 </a>

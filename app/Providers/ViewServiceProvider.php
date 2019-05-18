@@ -14,7 +14,6 @@ class ViewServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer('*', function ($view) {
-            $view->with('backstageCurrentUser', auth()->guard('backstage')->user());
         });
     }
 
@@ -25,6 +24,5 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
     }
 }
