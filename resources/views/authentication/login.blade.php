@@ -17,7 +17,7 @@
     </div>
     <div class="login-box-body">
         <p class="login-box-msg">Happy Coding</p>
-        <form action="{{route('backstage.authentication.login')}}" method="post">
+        <form action="{{route('authentication.login')}}" method="post">
             {{csrf_field()}}
             <div class="form-group has-feedback">
                 <input type="text" class="form-control" placeholder="登录账号" id="account" name="account"

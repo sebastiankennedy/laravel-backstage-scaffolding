@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Backstage;
+namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
-use MooCat\Validation\Validator;
 
 /**
  * Class AuthenticationController 后台用户认证控制器
  *
- * @package App\Http\Controllers\Backstage
+ * @package App\Http\Controllers
  */
 class AuthenticationController extends Controller
 {
@@ -31,7 +30,7 @@ class AuthenticationController extends Controller
      */
     public function showLoginForm()
     {
-        return view('backstage.authentication.login');
+        return view('authentication.login');
     }
 
     /**
@@ -41,7 +40,7 @@ class AuthenticationController extends Controller
      */
     public function redirectPath()
     {
-        return route('backstage.dashboard.index');
+        return route('dashboard.index');
     }
 
     /**
@@ -57,9 +56,9 @@ class AuthenticationController extends Controller
     /**
      * 用户退出登录
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request $request
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response|mixed
      */
     public function logout(Request $request)
     {
@@ -67,7 +66,7 @@ class AuthenticationController extends Controller
 
         $request->session()->invalidate();
 
-        return redirect(route('backstage.authentication.login.page'));
+        return redirect(route('authentication.login.page'));
     }
 
     /**
@@ -81,7 +80,7 @@ class AuthenticationController extends Controller
     }
 
     /**
-     * 定义用户多字段认证
+     * 定义用户认证
      *
      * @param Request $request
      *
@@ -90,7 +89,7 @@ class AuthenticationController extends Controller
     protected function attemptLogin(Request $request)
     {
         $credentials = [
-            Validator::validateMultipleLoginFields($request->input('account')) => $request->input('account'),
+            'account' => $request->input('account'),
             'password' => $request->input('password'),
         ];
 

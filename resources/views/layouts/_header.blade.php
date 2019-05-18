@@ -1,5 +1,5 @@
 <header class="main-header">
-    <a href="{{route('backstage.dashboard.index')}}" class="logo">Laravel <b>Tutorial</b></a>
+    <a href="{{route('dashboard.index')}}" class="logo">Laravel <b>Tutorial</b></a>
     <nav class="navbar navbar-static-top" role="navigation">
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
@@ -15,7 +15,7 @@
                                 <a href="" class="btn btn-primary btn-flat">编辑</a>
                             </div>
                             <div class="pull-right">
-                                <form action="{{route('backstage.authentication.logout')}}" method="post">
+                                <form action="{{route('authentication.logout')}}" method="post">
                                     {{csrf_field()}}
                                     <button class="btn btn-danger btn-flat">注销</button>
                                 </form>

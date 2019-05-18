@@ -23,7 +23,7 @@ class BackstageAuthenticate
     public function handle($request, Closure $next)
     {
         if (! auth()->guard('backstage')->check()) {
-            return redirect()->route('backstage.authentication.login.page');
+            return redirect()->route('authentication.login.page');
         }
 
         return $next($request);

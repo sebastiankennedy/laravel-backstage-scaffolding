@@ -17,8 +17,8 @@
 </head>
 <body class="skin-black">
 <div class="wrapper">
-    @include('backstage.layouts._header')
-    @include('backstage.layouts._sidebar')
+    @include('layouts._header')
+    @include('layouts._sidebar')
     <div class="content-wrapper">
         @if(!empty($pageTitle))
             <section class="content-header">
@@ -33,7 +33,7 @@
             @yield('content')
         </section>
     </div>
-    @include('backstage.layouts._footer')
+    @include('layouts._footer')
 </div>
 @yield('before.app.js')
 <script src="{{asset('js/app.js')}}"></script>
